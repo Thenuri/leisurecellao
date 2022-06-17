@@ -326,8 +326,13 @@ input[type=submit] {
  }   
  @media (device-width:280px){
     .flex1,.flex2{
-        margin-left:-20px;
-        width: 270px;
+        width: 250px;
+    }
+    #images{
+        width:220px;
+    }
+    #flex1,#flex2{
+        margin-left:-15px;
     }
 } 
 @media (device-width:1280px ){
@@ -345,8 +350,6 @@ input[type=submit] {
         text-align: center;
         padding-top: 20px;
     }
-    
-    
     .header6{
         min-height: 80vh;
         width:1300px;
@@ -364,7 +367,7 @@ input[type=submit] {
         margin-left:300px;
     }
     h1{
-        margin-left: 350px;
+        margin-left:120px;
     }
     .footer{
         width: 1300px;
@@ -374,6 +377,14 @@ input[type=submit] {
        margin-left: 50px;
     }
 }    
+@media (max-device-width:320px ){
+    .flex1,.flex2{
+        margin-left:20px;
+    }
+    .nav-links{
+        height: 22vh;
+    }
+}   
  
   
 

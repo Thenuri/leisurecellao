@@ -333,13 +333,21 @@ input[type=submit] {
     .flex1,.flex2{
         margin-left:20px;
     }
+    .nav-links{
+        height: 22vh;
+    }
 }   
 @media (device-width:280px){
     .flex1,.flex2{
-        margin-left:-20px;
-        width: 270px;
+        width: 250px;
     }
-}
+    #images{
+        width:220px;
+    }
+    #flex1,#flex2{
+        margin-left:-15px;
+    }
+} 
 @media (device-width:1280px ){
     .nav li{
        width: 100px;

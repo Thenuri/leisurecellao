@@ -145,14 +145,15 @@ table {
     width: 100%;
     border: 1px solid black;
   }
-  
-th, td {
-    text-align: left;
+th{
+    text-align: center;
+}
+td {
+    text-align:left;
     padding: 8px;
   }
 .table3,.table2{
-  overflow-x:auto;
-  
+  overflow-x:auto; 
   }
 tbody:nth-child(even){background-color: #cebfbf}
 .about{
@@ -161,7 +162,6 @@ tbody:nth-child(even){background-color: #cebfbf}
     text-align: center;
     padding-top: 20px;
 }
-
 .flex-container {
     display: flex;
 }
@@ -957,11 +957,17 @@ img{
         width: 250px;
         margin-left:-5px;
     }
+    .nav li{
+        height: 40px;
+    }
     .img7,.img8,.img9,.img10{
         margin-left: -30px;
     }
     .flex-child{
         width: 310px;
+    }
+    .nav-links{
+        height:22vh;
     }
     .img2,.img3,.img4{
         width: 220px;
