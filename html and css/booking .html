@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leisure Cellao</title>
+        <meta charset="utf-8">
+        <meta name="description" content=" About Sri Lanka what are the   fantastic things to do and amazing places to go.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style4.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16 (1)/apple-touch-icon.webp">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16 (1)/favicon-32x32.webp">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16 (1)/favicon-16x16.webp">
+        <link rel="manifest" href="images\favicon_package_v0.16 (1)/manifest.json">
+        <link rel="mask-icon" href="images/favicon_package_v0.16 (1)/safari-pinned-tab.svg" color="#e89536">
+        <link rel="shortcut icon" href="images/favicon_package_v0.16 (1)/favicon.ico">
+        <meta name="msapplication-TileColor" content="#e89536">
+        <meta name="msapplication-config" content="D:\WDOM ASSIGNMENT\CB010529(1)\html and css\images/browserconfig.xml">
+        <meta name="theme-color" content="#a0621a">
+    </head>
+    <body>
+        <div class="header">
+            <div class=" text-box"><h1>Reserve Your Tickets</h1></div>  
+        </div>
+        <section class="ticket_booking" id="row">
+
+            <div class="row purchase-items">
+                <div class="ticket-purchase1">
+                    <div class="ticket-pricing-headers">
+                        <h1>Foreign pass</h1>
+                    </div>
+                    
+                    <div class="pricing-plans">
+                        <p class="plan-cost"> LKR 5000 </p>
+                        <p class="plan-text">Per Adult</p>
+                        <br>
+                        <p class="plan-cost">LKR 2500</p>
+                        <p class="plan-text">Per Child</p>
+                        <p>(Age 3 - 12)</p>
+                        <br>
+                        <p class="plan-text">Conditions apply*</p>
+                    </div>
+                     
+                
+                
+            
+                </div>
+                <div class="ticket-purchase1">
+                    <div class="ticket-pricing-headers">
+                        <h1>Local Pass</h1>
+                    </div>
+                    
+                    <div class="pricing-plans">
+                        <p class="plan-cost">LKR 1000</p>
+                        <p class="plan-text">Per Adult</p>
+                        <br>
+                        <p class="plan-cost">LKR 500</p>
+                        <p class="plan-text">Per Child</p>
+                        <p>(Age 3 - 12)</p>
+                        <br>
+                        <p class="plan-text">Conditions apply*</p>
+                    </div>
+                </div>
+            
+                <div class="ticket-purchase1">
+                    <div class="ticket-pricing-headers">
+                        <h1>Annual Pass</h1>  
+                    </div>
+                    
+                    <div class="pricing-plans">
+                        <p class="plan-cost">LKR 15000</p>
+                        <p class="plan-text">Foreign</p>
+                        <br>
+                        <p class="plan-cost">LKR 4500</p>
+                        <p class="plan-text">Local</p>
+                        <br>
+                        <p class="plan-text">Conditions apply*</p>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="ticket-purchase1">
+                    <div class="ticket-pricing-headers">
+                        <h1>Consider </h1>  
+                    </div>
+                    
+                    <div class="pricing-plans">
+                       <p> For children under age 3, entrance is free. </p>
+                        
+                    </div>
+                    
+                    
+                </div>
+               
+            </div>
+            
+        </section>    
+        <br>
+        <div class="container">
+            <div class="contact-box">
+                <div class="left">
+
+                </div>
+                <div class="right">
+
+                    <form class="book_Tickets" id="book_tickets"> 
+                        <select name="activity" id="se_activity" class="selec_act"  onchange="calculate(); displayControl(); Control();" >
+                            <option value="" selected="" disabled="">Select Ticket Catagory</option>
+                            <option value="0">Foreign pass</option>
+                            <option value="1">Local Pass</option>
+                            <option value="2">Annual Pass-Foreign</option>
+                            <option value="3">Annual Pass-Local</option>
+                        </select>
+                        
+                            
+                        <input id="no1" class="hidden" name="no_Adults" min="0" type="number" placeholder="NO OF ADULTS"  onblur="calculate();" >
+                        <input id="no2" class="hidden" name="no_Children" min="0" type="number" placeholder="NO OF CHILDREN" onblur="calculate();">
+                        <input id="Annual_Pasee"  class="hidden" name="Annual_Pasee" min="0" type="number" placeholder="NO OF ANNUAL PASS"  onblur="calculate();" > 
+                        <br> 
+                        <br>
+                        <select name="cmbDuration" id="cmbDuration" class="cmbDuration" onchange="calculate();">
+                            <option value="" selected="" disabled="">Select The Duration Time</option>
+                            <option value="0">3 Hours</option>
+                            <option value="1">½ day</option>
+                            <option value="2">full day</option>
+                            <option value="3">2 days</option>
+                        </select>
+                            <input id="Tokens" name="Tokens" min="0" type="number"  placeholder="TOKENS FOR FOODS"  onchange="calculate();" >
+                            
+                        <div class="alert" style="display: none;"></div>
+                            <p id="order">Cost of the current order : LKR <span id="currentcost_Order">0.00</span></p>
+                            <br>
+                            <div class="local" id="Storage">
+                                <input  id="addFavourite" type="button" value="Add to favourites" class="">
+                                <br><br>
+                                <input id="orderFavourite" type="button" value="Order favourite" class="">
+                            </div>
+                                <br>
+                            
+                            <input id="AddOrders" type="button" value="Add to Order" class="add">
+                            <div id="divOrderstable" >
+                                <table id="tbl_order"   >
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Adult</th>
+                                                <th>Children</th>
+                                                <th>Duration</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody_order"></tbody>
+                                        <tfoot>
+                                            <tr id="">
+                                                <th colspan="3">Food Tokens</th>
+                                                <th colspan="1" id="thFtokens">0</th>
+                                                <th colspan="1" id="pthFtokens">0.00</th>
+                                            </tr>
+                                            <tr id="">
+                                                <th colspan="3"> Local Annual Passes</th>
+                                                <th colspan="1" id="alpasses">0</th>
+                                                <th colspan="1" id="palpasses">0.00</th>
+                                            </tr>
+                                            <tr id="">
+                                                <th colspan="3"> Foreign Annual Passes</th>
+                                                <th colspan="1" id="afpasses">0</th>
+                                                <th colspan="1" id="pafpasses">0.00</th> 
+                                            </tr>
+                                            <tr id="">
+                                                <th colspan="3">Grand Total</th>
+                                                <th colspan="2" style="text-align: center;"> LKR <span id="thGrandTot">0.00</span></th>
+                                            </tr>
+                                        </tfoot>
+                                </table>
+                                </div>
+                                    <input id="checkLoyality" type="button" value="Check Loyality" class="sub" onclick="showLoyaltyPoints();">
+                                    <br>
+                                    <br>
+                                    <p id="overallOrder">Cost of the Overall order : LKR <span id="overallGtotal">0.00</span></p>
+                                    <br>
+                                    <input id="placeOrder" type="button" value="Place Order" class="submit-btn">
+        
+
+                    </form>
+           
+ 
+                
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="cat" align="center"><a href="activity.html"  class="icon">Back to activity page</a></div>
+        <br>
+        <script src="Javascript/main.js"> </script>
+        
+    </body>
+</html>
