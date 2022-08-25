@@ -17,180 +17,149 @@
         <meta name="msapplication-config" content="D:\WDOM ASSIGNMENT\CB010529(1)\html and css\images/browserconfig.xml">
         <meta name="theme-color" content="#a0621a">
     </head>
-    <body>
+    <body onload="resetLocalStore();">
         <div class="header">
             <div class=" text-box"><h1>Reserve Your Tickets</h1></div>  
         </div>
-        <section class="ticket_booking" id="row">
-
+         <section class="ticket_booking" id="row"> 
             <div class="row purchase-items">
                 <div class="ticket-purchase1">
                     <div class="ticket-pricing-headers">
                         <h1>Foreign pass</h1>
                     </div>
-                    
                     <div class="pricing-plans">
-                        <p class="plan-cost"> LKR 5000 </p>
-                        <p class="plan-text">Per Adult</p>
+                        <p class="cost"> LKR 5000 </p>
+                        <p class="text-value">Per Adult</p>
                         <br>
-                        <p class="plan-cost">LKR 2500</p>
-                        <p class="plan-text">Per Child</p>
+                        <p class="cost">LKR 2500</p>
+                        <p class="text-value">Per Child</p>
                         <p>(Age 3 - 12)</p>
                         <br>
-                        <p class="plan-text">Conditions apply*</p>
+                        <p class="text-value">Conditions apply*</p>
                     </div>
-                     
-                
-                
-            
                 </div>
                 <div class="ticket-purchase1">
                     <div class="ticket-pricing-headers">
                         <h1>Local Pass</h1>
                     </div>
-                    
                     <div class="pricing-plans">
-                        <p class="plan-cost">LKR 1000</p>
-                        <p class="plan-text">Per Adult</p>
+                        <p class="cost">LKR 1000</p>
+                        <p class="text-value">Per Adult</p>
                         <br>
-                        <p class="plan-cost">LKR 500</p>
-                        <p class="plan-text">Per Child</p>
+                        <p class="cost">LKR 500</p>
+                        <p class="text-value">Per Child</p>
                         <p>(Age 3 - 12)</p>
                         <br>
-                        <p class="plan-text">Conditions apply*</p>
+                        <p class="text-value">Conditions apply*</p>
                     </div>
                 </div>
-            
                 <div class="ticket-purchase1">
                     <div class="ticket-pricing-headers">
                         <h1>Annual Pass</h1>  
                     </div>
-                    
                     <div class="pricing-plans">
-                        <p class="plan-cost">LKR 15000</p>
-                        <p class="plan-text">Foreign</p>
+                        <p class="cost">LKR 15000</p>
+                        <p class="text-value">Foreign</p>
                         <br>
-                        <p class="plan-cost">LKR 4500</p>
-                        <p class="plan-text">Local</p>
+                        <p class="cost">LKR 4500</p>
+                        <p class="text-value">Local</p>
                         <br>
-                        <p class="plan-text">Conditions apply*</p>
-                        
-                    </div>
-                    
-                    
+                        <p class="text-value">Conditions apply*</p>  
+                    </div>  
                 </div>
-                <div class="ticket-purchase1">
-                    <div class="ticket-pricing-headers">
-                        <h1>Consider </h1>  
-                    </div>
-                    
-                    <div class="pricing-plans">
-                       <p> For children under age 3, entrance is free. </p>
-                        
-                    </div>
-                    
-                    
-                </div>
-               
-            </div>
-            
         </section>    
         <br>
         <div class="container">
             <div class="contact-box">
                 <div class="left">
-
                 </div>
                 <div class="right">
-
+                    <b class="hr"> Consider:For children under the age  of 3 entrance is free.</b>
+                     <br>
+                     <br>
+                     <br>
                     <form class="book_Tickets" id="book_tickets"> 
                         <select name="activity" id="se_activity" class="selec_act"  onchange="calculate(); displayControl(); Control();" >
-                            <option value="" selected="" disabled="">Select Ticket Catagory</option>
+                            <option value="" selected="" disabled="">Select Ticket Choice</option>
                             <option value="0">Foreign pass</option>
                             <option value="1">Local Pass</option>
                             <option value="2">Annual Pass-Foreign</option>
                             <option value="3">Annual Pass-Local</option>
-                        </select>
-                        
-                            
+                        </select>   
                         <input id="no1" class="hidden" name="no_Adults" min="0" type="number" placeholder="NO OF ADULTS"  onblur="calculate();" >
                         <input id="no2" class="hidden" name="no_Children" min="0" type="number" placeholder="NO OF CHILDREN" onblur="calculate();">
                         <input id="Annual_Pasee"  class="hidden" name="Annual_Pasee" min="0" type="number" placeholder="NO OF ANNUAL PASS"  onblur="calculate();" > 
                         <br> 
                         <br>
                         <select name="cmbDuration" id="cmbDuration" class="cmbDuration" onchange="calculate();">
+
                             <option value="" selected="" disabled="">Select The Duration Time</option>
                             <option value="0">3 Hours</option>
                             <option value="1">½ day</option>
                             <option value="2">full day</option>
                             <option value="3">2 days</option>
-                        </select>
-                            <input id="Tokens" name="Tokens" min="0" type="number"  placeholder="TOKENS FOR FOODS"  onchange="calculate();" >
-                            
-                        <div class="alert" style="display: none;"></div>
-                            <p id="order">Cost of the current order : LKR <span id="currentcost_Order">0.00</span></p>
-                            <br>
-                            <div class="local" id="Storage">
-                                <input  id="addFavourite" type="button" value="Add to favourites" class="">
-                                <br><br>
-                                <input id="orderFavourite" type="button" value="Order favourite" class="">
-                            </div>
-                                <br>
-                            
-                            <input id="AddOrders" type="button" value="Add to Order" class="add">
-                            <div id="divOrderstable" >
-                                <table id="tbl_order"   >
-                                        <thead>
-                                            <tr>
-                                                <th>Category</th>
-                                                <th>Adult</th>
-                                                <th>Children</th>
-                                                <th>Duration</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="tbody_order"></tbody>
-                                        <tfoot>
-                                            <tr id="">
-                                                <th colspan="3">Food Tokens</th>
-                                                <th colspan="1" id="thFtokens">0</th>
-                                                <th colspan="1" id="pthFtokens">0.00</th>
-                                            </tr>
-                                            <tr id="">
-                                                <th colspan="3"> Local Annual Passes</th>
-                                                <th colspan="1" id="alpasses">0</th>
-                                                <th colspan="1" id="palpasses">0.00</th>
-                                            </tr>
-                                            <tr id="">
-                                                <th colspan="3"> Foreign Annual Passes</th>
-                                                <th colspan="1" id="afpasses">0</th>
-                                                <th colspan="1" id="pafpasses">0.00</th> 
-                                            </tr>
-                                            <tr id="">
-                                                <th colspan="3">Grand Total</th>
-                                                <th colspan="2" style="text-align: center;"> LKR <span id="thGrandTot">0.00</span></th>
-                                            </tr>
-                                        </tfoot>
-                                </table>
-                                </div>
-                                    <input id="checkLoyality" type="button" value="Check Loyality" class="sub" onclick="showLoyaltyPoints();">
-                                    <br>
-                                    <br>
-                                    <p id="overallOrder">Cost of the Overall order : LKR <span id="overallGtotal">0.00</span></p>
-                                    <br>
-                                    <input id="placeOrder" type="button" value="Place Order" class="submit-btn">
-        
+                        </select>     
+                        <input id="Tokens" name="Tokens" min="0" type="number"  placeholder="TOKENS FOR FOODS"  onchange="calculate();" >
+                        <p id="order">Cost of the current order : LKR <span id="currentcost_Order">0.00</span></p>
+                        <br>
+                        <div class="localContainer" id="Storage">
 
+                            <input  id="addFavourite" type="button" value="Add to favourites" class="" onclick="addToFavorite();">
+
+                            <input id="orderFavourite" type="button" value="Order favourite" class="" onclick="orderFromFav();">
+                        </div>
+                        <br>
+                        <input id="AddOrders" type="button" value="Add to Order" class="add">
+
+                        <div id="divOrderstable">
+
+                            <table id="tableOrder">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Adult</th>
+                                        <th>Children</th>
+                                        <th>Duration</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mainOrder"></tbody>
+                                <tfoot>
+                                    <tr id="">
+                                        <th colspan="3">Food Tokens</th>
+                                        <th colspan="1" id="Ftokens">0</th>
+                                        <th colspan="1" id="pFtokens">0.00</th>
+                                    </tr>
+                                    <tr id="">
+                                        <th colspan="3"> Local Annual Passes</th>
+                                        <th colspan="1" id="alpasses">0</th>
+                                        <th colspan="1" id="palpasses">0.00</th>
+                                    </tr>
+                                    <tr id="">
+                                        <th colspan="3"> Foreign Annual Passes</th>
+                                        <th colspan="1" id="afpasses">0</th>
+                                        <th colspan="1" id="pafpasses">0.00</th> 
+                                    </tr>
+                                    <tr id="">
+                                        <th colspan="3">Grand Total</th>
+                                        <th colspan="2" style="text-align: center;"> LKR <span id="GrandTotal">0.00</span></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <input id="checkLoyality" type="button" value="Check Loyality" class="sub" onclick="showLoyaltyPoints();">
+                        <br>
+                        <br>
+                        <p id="overallOrder">Overall cost of the order : LKR <span id="overalltotal">0.00</span></p>
+                        <br>
+                        <input id="placeOrder" type="button" value="Place Order" class="submit">
                     </form>
-           
- 
-                
                 </div>
             </div>
-            
         </div>
-
-        <div class="cat" align="center"><a href="activity.html"  class="icon">Back to activity page</a></div>
+        <div class="cat" id="cat_button" ><a href="activity.html"  class="icon">Back to activity page</a></div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <div style="padding:30px 20px 20px"></div>
         <br>
         <script src="Javascript/main.js"> </script>
         

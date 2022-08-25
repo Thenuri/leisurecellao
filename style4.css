@@ -45,45 +45,24 @@ html,body{
     margin-top: 2%;
     padding: 30px;
     display: flex;
+    /* flex-flow: row nowrap; */
     justify-content: space-between;
 }
-.subone{
-    flex-basis: 32%;
-    border-radius: 20px;
-    border:1px solid rgb(208, 51, 77);
-    margin-bottom: 0%;
-    padding: 25px 9px;
-    box-sizing: border-box;
-    transition: 0.5s;
-    background:whitesmoke;
-}
-.subone:hover{
-    box-shadow: 0 0 20px 0px rgb(14, 3, 39);
-}
 
-.purchase-items{
-    width: 90%;
-    margin:auto;
-    padding: 20px;
-    flex-basis: 33%;
-    
 
-}
 
 .ticket-purchase1{
-    width: 100%;
-    border-radius:1500px;
-    box-shadow: 20px 30px 80px rgba(3, 3, 3, 0.2);
+    width: 75%;
     overflow: hidden;
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1;
     color : rgb(228, 85, 114);
-    margin: 15px;
+    margin: 15px auto;
 
 }
 
 .ticket-pricing-headers{
-    padding: 25px;
+    padding: 20px;
     background:rgb(215, 82, 104);
     color: white;
 
@@ -137,7 +116,7 @@ html,body{
     flex-direction: column;
 }
 
-.plan-cost{
+.cost{
     margin: 0;
     text-align: center;
     font-size: 2em;
@@ -146,7 +125,7 @@ html,body{
 
 }
 
-.plan-text{
+.text-value{
     font-size: 0.9em;
     text-align: center;
     margin: 0 0 10px 0;
@@ -218,56 +197,29 @@ ticket_booking{
 
 
 /* ----------------this is for the buttons in the forms -----------------------*/
+.localContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
 #addFavourite, #orderFavourite,#AddOrder,#checkLoyality,#placeOrder,#AddOrders{
     display: inline-block;
     width: 100%;
     flex-basis: 49%;
-    background:rgb(208, 51, 77);
-    color:#fff;
+    border: 2px solid rgb(208, 51, 77);
+    color:black;
     border-radius: 10px;
     transition: 1s;
+
     
     
+}
+#addFavourite, #orderFavourite {
+    padding: 15px !important;
 }
 
 #addFavourite,#orderFavourite,#checkLoyality,#placeOrder,#AddOrders{
     padding: 5px;
-}
-
-#placeOrder:hover{
-    letter-spacing: 2px;
-    opacity: .8;
-
-
-}
-
-
-#addFavourite:hover{
-    letter-spacing: 2px;
-    opacity: .8;
-
-
-}
-
-#orderFavourite:hover{
-    letter-spacing: 2px;
-    opacity: .8;
-
-
-}
-
-#AddOrders:hover{
-    letter-spacing: 2px;
-    opacity: .8;
-
-
-}
-
-#checkLoyality:hover{
-    letter-spacing: 2px;
-    opacity: .8;
-
-
 }
 
 
@@ -295,6 +247,10 @@ ticket_booking{
     opacity: 80%;
       
 
+}
+.hr{
+    color:rgb(208, 51, 77) ;
+    font-size: 25px;
 }
 
 /*-----------------------------this for the form that has put side by side with a image---------*/
@@ -331,7 +287,7 @@ ticket_booking{
 }
 
 .left{
-    height: 100%;
+    height: 85%;
     width: 100%;
     background: url(images/506-9154-tickets-960px-01a355325cb3581d.png) no-repeat center;
     background-size: cover;
@@ -412,121 +368,42 @@ th,table,td{
     border-radius: 20%;
     
 }
-/*---------------------------------------------- donation page---------------------------------------------------*/
-.donate_section{
-    width: 80%;
-}
-
-
-#donation_form{
-    width: 60%;
-    padding: 7%;
-    margin-left: 25%;
-    box-shadow: 0 4px 8px 0 #30475e , 0 4px 8px 0 #30475e;
-    
-}
-
-
-#donation_form select{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 23px;
-    background-color: rgba(34, 34, 34, 0.392);
-    
-}
-
-.select {
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-   
-
-    
-
-  }
+#cat_button{
+    box-align: center ;
   
-.select__item {
-    padding: 10px;
-    margin-right: 10px;
-    width: 90%;
-    height: 40px;
-    cursor: pointer;
-    font-family: "Heebo", sans-serif;
+}
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
     font-size: 18px;
-    text-align: center;
-    border-radius: 3px;
-    background: #ffffff;
-    transition:1s;
-    border: #703f04 solid;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
   }
-
-
-.select__item:hover  {
-    border: 1px black solid;
-  }
-
   
-.select__item--selected {
-    background: #b29840;
-    color: #ffffff;
-    align-items: center;
+#myBtn:hover {
+    background-color: #555;
   }
 
 
-
-#id_type{
-    margin-left: 20px;
-}
-
-#donation_form label{
-    font-size: 27px;
-
-}
-
-#donation_form input{
-    font-size: 22px;
-    margin-bottom: 20px;
-
-}
-
-#fixedDonations{
-    margin-top: 20px;
-    display: block;
-    color: rgb(48, 48, 48);
-    padding-bottom: 5px;
-    padding-left: 10px;
-    width: 100%;
-    text-align: center;
-    font-weight: 300;
-    
-}
-h1{
-    text-align: center;
-}
-.box1,#address{
-    margin-top: 4px;
-    width:100%;
-    font-size: 22px;
-    padding: 10px;
-    border: 3px solid;
-    border-radius: 15px;
-    box-sizing: border-box;
-    margin:10px 0 15ps 0 ;
-}
-
-
-@media (max-device-width:900px ){
+@media only screen and (max-device-width:900px ){
     .row{
         flex-direction: column;
     }
 }    
-@media (max-device-width:250px ){
+@media only screen and (max-device-width:250px ){
     .row{
         flex-direction: column;
     }
 }
 
-@media (max-device-width:1500px ){
+@media only screen and (max-device-width:1500px ){
     .row{
         flex-direction: column;
     }

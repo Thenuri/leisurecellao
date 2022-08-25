@@ -38,52 +38,42 @@
             <article>
                 <br>
                 <h2 class="pur">Purchase And Donate </h2>
-                <div class="flex">
-
-                    <div class="flex1" id="flex1">
+                <div class="panel">
+                    <div class="card">
                         <p class="new">Arts</p>
-                        <img src="images/posts_BlogPost21380_1447078308206-shutterstock_223558348small (1).webp" alt="art" class="img6" id="img6">
+                        <img src="images/posts_BlogPost21380_1447078308206-shutterstock_223558348small (1).webp" alt="art" class="card-image">
                         <p class="new">$20</p>
-                        <input type="submit" value="Add To Cart" class="button">
+                        <input type="submit" value="Add To Cart" class="card-button">
                     </div>
-                    <br>
-                    <br>
-                    <div class="flex1" id="flex1">
+                    <div class="card">
                         <p class="new">Jewelry</p>
-                        <img src="images/bangles-e1533623309352 (1).webp" alt="bangle" class="img6" id="img6">
+                        <img src="images/bangles-e1533623309352 (1).webp" alt="bangle" class="card-image">
                         <p class="new">$100</p>
-                        <input type="submit" value="Add To Cart" class="button">   
+                        <input type="submit" value="Add To Cart" class="card-button">   
                     </div>
-                    <br>
-                    <br>
-                    <div class="flex1" id="flex1">
+                    <div class="card">
                         <p class="new">Mask</p>
-                        <img src="images/download.webp" alt="mask" class="img6" id="img6">
+                        <img src="images/download.webp" alt="mask" class="card-image">
                         <p class="new">$50</p>  
-                        <input type="submit" value="Add To Cart" class="button">
+                        <input type="submit" value="Add To Cart" class="card-button">
                     </div>
                 </div>
                 <Section class="donate_section">
-                <form action="action" id="donation_form">
-
+                <form action="action" id="donation">
                     <h1>Donations </h1>
                     <label for="name" id="lb_name"> Enter Payer Full Name:</label><br>
-
                     <input  class="box1" type="text" name="name" id="in_name" placeholder="Enter Name"><br>
                     <label for="name" id="lb_name"> Enter your address:</label><br>
                     <textarea  rows="3" id="address" placeholder="Enter Your Address" required ></textarea>
                     <br><br>
                     <label for="type" id="lb_type" >Type Of Donations:</label>
-
                     <select name="" id="id_type" class="selction_box">
                         <option value="00">Children Care Donations</option>
                         <option value="01"> Wild Life Donations</option>
                         <option value="02">Heritage Donations</option>
                     </select><br><br>
-
-                    <label for="Donations" id="fixedDonations" class="lbdate">Select fixed Donation values from below list</label> <br>
-
-                    <select name="language" class="custom-select" id="fixedDonatons" multiple >
+                    <label for="Donations">Select fixed Donation values from below list:</label>
+                    <select name="language" class="custom-select" id="fixedDonatons" >
                         <option value="100">LKR 100 </option>
                         <option value="500">LKR 500 </option>
                         <option value="1000">LKR 1000 </option>
@@ -102,16 +92,13 @@
                    <label for="cardCVC">Card CVC</label><br>
                    <input class="box1" type="text" name="cvc" id="CVC" placeholder="cvc" maxlength="3"><br>
                    <div div class="div1">
-                   <input  type="button" value="Donate" id="donateBtn" class="submit-btn" onclick="inputValidation();"> 
-                  
+                   <input  type="button" value="Donate" id="donateBtn" class="submit" onclick="inputValidation();"> 
                 </form>
             </Section>
             <br>
             <br> 
         <footer>
-
             <div class="footer">
-
                 <div class="social">
                     <a href="#"><i class="fa fa-facebook-square"></i></a>
                     <a href="#"><i class="fa fa-instagram"></i></a>
@@ -124,7 +111,8 @@
                         <li><a href="contac_us.html" >Contact Us</a></li>
                         <li><a href="srilanaka.html" >Sri Lanka Map</a></li>
                     </ul>
-                    <input type="submit" value="Top " class="yop">
+                    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                    <div style="padding:30px 20px 20px"></div>
                     <p class="copyright">
                         Copyright &copy; Leisure Cellao Traveles And Tours 2022. 
                     </p>
@@ -142,7 +130,6 @@ Available at: https://www.insightguides.com/inspire-me/blog/what-to-buy-in-sri-l
 (Accessed 14 6 2022).
 -->      
         </footer>
-
         <script src="Javascript/main.js"> </script> 
     </body>
 </html>

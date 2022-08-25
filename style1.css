@@ -1,10 +1,10 @@
 *{
     margin:0;
     padding: 10;
- }
- body{
+}
+body{
      background-color:white; 
- }
+}
  /* ----------------------------navigation section-----------------------------------*/
 .nav-links img{
     width: 150px;
@@ -83,15 +83,17 @@ nav{
  .row{
     margin-top: 2%;
     padding: 30px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+ 
 }
 .subone{
-    flex-basis: 32%;
-    border-radius: 20px;
+    flex-basis:32%;
+    width: 400px;
+    border-radius: 0px;
     border:1px solid saddlebrown;
-    margin-bottom: 0%;
-    padding: 25px 9px;
+    
+    padding:20px;
+    flex-flow: column;
     box-sizing: border-box;
     transition: 0.5s;
     background:whitesmoke;
@@ -102,13 +104,12 @@ nav{
 .row1{
     margin-top: 2%;
     padding: 30px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
 }
 /*---------------------------------activity-----------------------*/
 
 .subt{
-    flex-basis: 100%;
+    flex-basis: 50%;
     border:1px solid saddlebrown;
     border-radius: 20px;
     margin-bottom: 0%;
@@ -157,10 +158,10 @@ th{
 td {
     text-align:left;
     padding: 8px;
-  }
+}
 .table3,.table2{
   overflow-x:auto; 
-  }
+}
 tbody:nth-child(even){background-color: #cebfbf}
 .about{
     width: 80%;
@@ -169,25 +170,29 @@ tbody:nth-child(even){background-color: #cebfbf}
     padding-top: 20px;
 }
 .flex-container {
-    display: flex;
+    display: grid;
+    row-gap: 50px;
+    padding: 10px;
+    margin:20px 50px;
+ 
 }
 .flex-child {
-    flex: 1;
-    height: 1190px;
-    width: 400px;
-    flex-basis: 32%;
-    border: 1px solid saddlebrown;
-    border-radius: 20px;
-    margin-bottom: 0%;
-    padding: 50px 12px;
+   
+    flex-basis:30%;
+    margin:20px 50px;
+    border-radius: 0px;
+    border:1px solid saddlebrown;
+    margin-bottom:auto;
+    /*padding:25px 0px;*/
+    flex-flow: column;
     box-sizing: border-box;
     transition: 0.5s;
     background:whitesmoke;
 } 
-.flex-child:first-child {
+/*.flex-child:first-child {
     margin-right:10px;
     margin-left: 5px;
-} 
+} */
 ul{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -202,15 +207,14 @@ ul{
     text-align: center;
 }
 .flex{
-    display: flex;
+    display: grid;
     width: 300px;
-    align-items: center;
+   
     padding: 50px;
 }
 .flex1{
     flex: 1;
     border: 5px solid black;
-    margin-left: 100px;
     margin-bottom: 0%;
     box-sizing: border-box;
     flex-basis: 32%;
@@ -252,7 +256,7 @@ ul{
 }
 
 
-#donation_form{
+#donation{
     width: 60%;
     padding: 7%;
     margin-left: 25%;
@@ -261,7 +265,7 @@ ul{
 }
 
 
-#donation_form select{
+#donation select{
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 23px;
@@ -312,12 +316,12 @@ ul{
     margin-left: 20px;
 }
 
-#donation_form label{
+#donation label{
     font-size: 25px;
 
 }
 
-#donation_form input,#donation_form textarea,#donation_form select{
+#donation input,#donation textarea,#donation select,#donation checkbox{
     font-size: 15px;
     margin-bottom: 20px;
 
@@ -335,7 +339,7 @@ ul{
     font-weight: 300;
     
 }
-#donation_form h1{
+#donation h1{
     text-align: center;
     font-size: 50px;
 }
@@ -349,7 +353,7 @@ ul{
     box-sizing: border-box;
     margin:10px 0 15ps 0 ;
 }
-.submit-btn{
+.submit{
     width: 80%;
     align-items: center;
     transform: translateX(15%);
@@ -364,9 +368,37 @@ ul{
     transition: .2s linear;
 }
 
-.submit-btn:hover{
+.submit:hover{
     letter-spacing: 2px;
     opacity: .8;
+}
+.panel {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel .card {
+    background-color: rgb(123, 120, 116);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+    padding-left:  15px;
+    padding-right: 15px;
+}
+.card-image {
+    text-align: center;
+    width: 250px;
+}
+.card-button {
+    background-color: black;
+    opacity:.8;
+    color: white;
+    width: 100%;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .contact{
     font-size: 30px; 
@@ -415,30 +447,50 @@ ul{
     color: white;
     font-size: 40px;
 }
-#img3{
-    margin-left:30px;
+.img3,.img4{
+    width: 400px;
+   
+    height: 250px;
+   
 }
-#img2{
-    margin-left: 140px;
+.img9,.img10,.img8{
+    width: 300px;
+    height: 300px;
 }
-#img4{
-    margin-left: 220px;
-}
-.img2{
-    margin-left: 50px;
-    border-radius: 20px;
-}
+
 .img11,.img5{
-    margin-left: 75px;
+    margin-left:50px;
 }
 img{
     border-radius: 20px;
+}
+.img2{
+    margin-left: 0px;
+    width: 400px;
 }
 .img11,.img5{
   width: 300px;
   height: 230px;
   border-radius: 20px;
 }
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 140, 0);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+#myBtn:hover {
+    background-color: #555;
+  }
 .footer{
     padding: 20px 0;
     background-color: saddlebrown;
@@ -536,16 +588,17 @@ img{
     font-size: 13px;
     color: black;
 }
-.img9,.img7,.img8,.img10{
+/*.img9,.img7,.img8,.img10{
     width: 400px;
     height: 400px;
-}
+}*/
 #subone:hover{
-    transform: scale(1.1,1.1);
-}
-#subt:hover{
     transform: scale(0.9,0.9);
 }
+#subtm:hover{
+    transform: scale(0.9,0.9);
+}
+/*
 #img{
     margin-left: 50px;
 }
@@ -557,7 +610,7 @@ img{
 }
 #flex1:hover{
     transform: scale(1.1,1.1);
-}
+}*/
 @media (max-device-width:900px ){
     .row{
         flex-direction: column;
@@ -598,10 +651,10 @@ img{
         flex-direction: column;
         padding: 12px;
     }
-    .img7,.img8,.img9,.img10{
+    /*.img7,.img8,.img9,.img10{
         width: 275px;
         height: 300px;
-    }
+    }*/
     .nav li{ 
         margin: 0px;
         margin-left: 0px; 
@@ -803,9 +856,7 @@ img{
     table{
         margin-left:-17px;
     }
-    .subone{
-        width: 330px;
-    }
+    
 }
 @media (device-width:820px ){
    .flex-container{
@@ -858,9 +909,7 @@ img{
     }
   }
   @media (device-width:912px ){
-    .subone{
-          width: 100px;
-    }
+    
     .img11,.img5{
         margin-left:14px;
     }
@@ -943,10 +992,7 @@ img{
     .header4,.header3{
         width: 320px;
     }
-    .subone{
-        width: 260px;
-        margin-left:-20px;
-    }
+    
     .img2,.img3,.img4{
         width: 200px; 
     }
