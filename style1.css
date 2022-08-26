@@ -360,7 +360,7 @@ ul{
     border: 3px solid;
     border-radius: 15px;
     box-sizing: border-box;
-    margin:10px 0 15ps 0 ;
+    margin:10px 0 15px 0 ;
 }
 .submit{
     width: 80%;
@@ -646,7 +646,7 @@ img{
     p{
         text-align:justify;
         font-size:120%;
-        font-weight: 200%;
+        
     }
     .img2{
         width: 300px;
@@ -757,7 +757,7 @@ img{
         font-size: 17px;
     }
      .nav-links{
-        height: 22hv;
+        height: 22vh;
     }
      .img11,.img5{
         margin-left:6px;
