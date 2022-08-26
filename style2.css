@@ -4,7 +4,7 @@
 }
  
 body{
-  background: url(images/aged-burnt-paper-mixed-1193464.jpg);
+  background: url(images/aged-burnt-paper-mixed-1193464.webp);
 }
  
 /*.flex{
@@ -81,7 +81,7 @@ h1{
 .nav-links{
     background: #222;
     width:100%;
-    height: 22vh;
+    height: 17vh;
 }
 nav{
     background: #000;
