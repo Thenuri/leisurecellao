@@ -56,18 +56,21 @@ body{
 .anu{
     text-align: center;
     font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 h2{
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
   
 }
 #images{
-    margin-left:75px;
+    margin-left:20px;
 }
 h1{
     text-align: center;
     font-weight: 500px;
     font-size:30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
  .nav-links img{
     width: 150px;
@@ -132,6 +135,7 @@ p{
     text-align:justify;
     font-size: 120%;
     font-weight: 200%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .footer{
     padding: 20px 0;
@@ -200,6 +204,7 @@ input[type=submit] {
     margin: auto;
     text-align: center;
     padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #myBtn {
     position: fixed;
@@ -225,7 +230,7 @@ input[type=submit] {
 #flex2:hover{
     transform: scale(1.1,1.1);
 }*/
-#subtm:hover{
+#subanu:hover{
     transform: scale(0.9,0.9);
 }
 
@@ -265,6 +270,9 @@ input[type=submit] {
     .flex1,.flex2{
         
         margin-left:120px;
+    }
+    #images{
+        margin-left: 35px;
     }
     
     }  
@@ -307,13 +315,13 @@ input[type=submit] {
             margin-left:120px;
     }
         
- } 
+} 
  @media (device-width:540px){
     .flex{
         margin-left:80px;
     }
     
- }
+}
  @media (device-width:912px ){
     .nav li{
         width: 420px;
@@ -327,7 +335,7 @@ input[type=submit] {
     .flex1,.flex2{
         margin-left: 600px;
     }
- } 
+} 
  @media (device-width:1024px ){
     .nav li{
        width: 100px;

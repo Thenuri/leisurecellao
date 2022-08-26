@@ -79,19 +79,19 @@
                      <br>
                      <br>
                     <form class="book_Tickets" id="book_tickets"> 
-                        <select name="activity" id="se_activity" class="selec_act"  onchange="calculate(); displayControl(); Control();" >
+                        <select name="activity" id="se_activity" class="selec_act"  onchange="calculate(); displayControl(); Control();" required>
                             <option value="" selected="" disabled="">Select Ticket Choice</option>
                             <option value="0">Foreign pass</option>
                             <option value="1">Local Pass</option>
                             <option value="2">Annual Pass-Foreign</option>
                             <option value="3">Annual Pass-Local</option>
                         </select>   
-                        <input id="no1" class="hidden" name="no_Adults" min="0" type="number" placeholder="NO OF ADULTS"  onblur="calculate();" >
-                        <input id="no2" class="hidden" name="no_Children" min="0" type="number" placeholder="NO OF CHILDREN" onblur="calculate();">
-                        <input id="Annual_Pasee"  class="hidden" name="Annual_Pasee" min="0" type="number" placeholder="NO OF ANNUAL PASS"  onblur="calculate();" > 
+                        <input id="no1" class="hidden" name="no_Adults" min="0" type="number" placeholder="NO OF ADULTS"  onblur="calculate();" required >
+                        <input id="no2" class="hidden" name="no_Children" min="0" type="number" placeholder="NO OF CHILDREN" onblur="calculate();" required>
+                        <input id="Annual_Pasee"  class="hidden" name="Annual_Pasee" min="0" type="number" placeholder="NO OF ANNUAL PASS"  onblur="calculate();"required > 
                         <br> 
                         <br>
-                        <select name="cmbDuration" id="cmbDuration" class="cmbDuration" onchange="calculate();">
+                        <select name="cmbDuration" id="cmbDuration" class="cmbDuration" onchange="calculate();" required>
 
                             <option value="" selected="" disabled="">Select The Duration Time</option>
                             <option value="0">3 Hours</option>
@@ -99,7 +99,7 @@
                             <option value="2">full day</option>
                             <option value="3">2 days</option>
                         </select>     
-                        <input id="Tokens" name="Tokens" min="0" type="number"  placeholder="TOKENS FOR FOODS"  onchange="calculate();" >
+                        <input id="Tokens" name="Tokens" min="0" type="number"  placeholder="TOKENS FOR FOODS"  onchange="calculate();" required>
                         <p id="order">Cost of the current order : LKR <span id="currentcost_Order">0.00</span></p>
                         <br>
                         <div class="localContainer" id="Storage">

@@ -23,7 +23,7 @@ html,body{
 .header{
     min-height: 60vh;
      width:100%;
-     background-image: url(images/booking.jpg);
+     background-image: url(images/booking.webp);
      background-position:center;
      background-size: cover;
      position:relative;
@@ -48,9 +48,6 @@ html,body{
     /* flex-flow: row nowrap; */
     justify-content: space-between;
 }
-
-
-
 .ticket-purchase1{
     width: 75%;
     overflow: hidden;
@@ -58,71 +55,51 @@ html,body{
     line-height: 1;
     color : rgb(228, 85, 114);
     margin: 15px auto;
-
 }
-
 .ticket-pricing-headers{
     padding: 20px;
     background:rgb(215, 82, 104);
     color: white;
-
 }
-
 .ticket-pricing-headers h1, .ticket-pricing-headers p{
     text-align: center;
     margin: 0;
     font-size: 25px;
-
-
 }
-
 .ticket_pricing_header h1{
     font-size: 1.5em;
     font-weight: 300;
     padding: 5px;
-
 }
-
 .ticket_pricing_header p{
     font-size: 10px;
     font-weight: 100;
-
 }
-
 .ticket-pricing-plans{
     padding: 30px;
-
 }
-
 .pricing-plans-list{
     padding: 0;
     margin: 0;
 }
-
 .pricing-plans-feature{
     list-style: none;
     margin: 0;
     padding-left: 25px;
     position: relative;
     font-size: 0.9em;
-
 }
-
-
 .pricing-plans{
     padding: 25px;
     border-top: 1px solid #eeee;
     display: flex;
     flex-direction: column;
 }
-
 .cost{
     margin: 0;
     text-align: center;
     font-size: 2em;
     color: black;
-
-
 }
 
 .text-value{
@@ -140,30 +117,19 @@ ticket_booking{
     padding-bottom: 50px;
     box-shadow: 0 0 40px 0px rgba(16, 65, 2, 0.274);
     background-color: rgba(195, 255, 195, 0.11);
-    border-radius: 30px;
-    
+    border-radius: 30px;  
 }
-
-
-
-
 .ticket_booking h1{
    text-align: center;
    padding-top: 30px;
 }
-
 .ticket_booking p{
-    font-size: 20px;
-    
-   
-    
+    font-size: 20px;   
 }
 .ticket_booking h1 , .ticket_booking p{
     text-align: center;
     width: 100%;
     margin: auto;
-    
-
 }
 /*.row{
     margin-top: 2%;
@@ -209,10 +175,7 @@ ticket_booking{
     border: 2px solid rgb(208, 51, 77);
     color:black;
     border-radius: 10px;
-    transition: 1s;
-
-    
-    
+    transition: 1s;   
 }
 #addFavourite, #orderFavourite {
     padding: 15px !important;
@@ -221,38 +184,16 @@ ticket_booking{
 #addFavourite,#orderFavourite,#checkLoyality,#placeOrder,#AddOrders{
     padding: 5px;
 }
-
-
 #order{
     margin-top: 15px;
 }
-
-
 #overallOrder , #order {
     font-style:initial;
-}
-
-.alert{
-    text-align: center;
-    width: 100%;
-    padding: 8px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20px;
-    border: rgb(208, 51, 77)3px  solid;
-    border-radius: 20px;
-    outline-width: 3px;
-    outline-color:rgb(208, 51, 77);
-    opacity: 80%;
-      
-
 }
 .hr{
     color:rgb(208, 51, 77) ;
     font-size: 25px;
 }
-
 /*-----------------------------this for the form that has put side by side with a image---------*/
 .container{
     position: relative;
@@ -263,7 +204,6 @@ ticket_booking{
     height: 100%;
     padding: 20px 100px;
 }
-
 .container::after{
     content: '';
     position: absolute;
@@ -285,11 +225,10 @@ ticket_booking{
     text-align: center;
     background-color: #fff;
 }
-
 .left{
     height: 85%;
     width: 100%;
-    background: url(images/506-9154-tickets-960px-01a355325cb3581d.png) no-repeat center;
+    background: url(images/506-9154-tickets-960px-01a355325cb3581d.webp) no-repeat center;
     background-size: cover;
 }
 .right{
@@ -332,17 +271,17 @@ padding: 25px 40px;
 table {
     
     width: 100%;
-  }
+}
   #divOrderstable {
     margin: auto;
     padding: 7px;
     margin-top: 10px;
     
-  }
+}
   
 th,table,td{
     border: 2px solid rgb(219, 101, 120);
-  }
+}
  /* this for the small input boxes*/
 #Tokens,#no1,#no2,#Annual_Pasee {
     width: 250px;
@@ -354,7 +293,6 @@ th,table,td{
     margin-bottom: 22px;
     transition: 3s;
 }
-
 .icon{
     width: 200px;
     background-color:rgb(208, 51, 77);
@@ -365,12 +303,10 @@ th,table,td{
     display: inline-block;
     font-size: 16px;
     margin-left: 15px;
-    border-radius: 20%;
-    
+    border-radius: 20%;   
 }
 #cat_button{
-    box-align: center ;
-  
+    box-align: center ; 
 }
 #myBtn {
     position: fixed;
@@ -386,12 +322,9 @@ th,table,td{
     padding: 15px;
     border-radius: 4px;
   }
-  
 #myBtn:hover {
     background-color: #555;
   }
-
-
 @media only screen and (max-device-width:900px ){
     .row{
         flex-direction: column;

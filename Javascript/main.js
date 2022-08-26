@@ -88,7 +88,7 @@ let tickets={
   lduration:[0,250,500,1000],
   fduration:[0,500,1000,2000],
   extra:[500]
-  }
+}
 
 //global scope variables for the  price calculations
 
@@ -101,9 +101,7 @@ var ticket = {
   af_value:0,
   al_value:0,
   al_price:0,
-  af_price:0,
-
-  
+  af_price:0, 
 };
 let formData = {
 choice: "",
@@ -115,7 +113,6 @@ tokens: ""
 }
 
 function calculate(){
-
   var ticket_price = tickets["price"];
   var lduration_price =tickets["lduration"];
   var fduration_price = tickets["fduration"];
@@ -131,12 +128,13 @@ function calculate(){
   var Duration = document.getElementById("cmbDuration").value;
   var tokens = document.getElementById("Tokens").value;
     
-    formData.choice = choice;
-    formData.noOfAdults = noOfAdults;
-    formData.noOfChildren = noOfChildren;
-    formData.Annualpass = Annualpass;
-    formData.Duration = Duration;
-    formData.tokens = tokens;
+  formData.choice = choice;
+  formData.noOfAdults = noOfAdults;
+  formData.noOfChildren = noOfChildren;
+  formData.Annualpass = Annualpass;
+  formData.Duration = Duration;
+  formData.tokens = tokens;
+
 
 
 
@@ -207,13 +205,12 @@ function calculate(){
     ticket.af_value = Annualpass 
 
     console.log(ticket);
-  }
+}
   // add to current order into a table 
 document.getElementById("AddOrders").onclick = function(){
   if(tprice>0){
       document.getElementById("tableOrder").style = "display: inlineblock;"
-    }
-    
+  }
   var tprice = parseFloat(document.getElementById("currentcost_Order").innerHTML);
   if(tprice === 0){
     alert("you cannot place an order without any items selected.");
@@ -223,22 +220,18 @@ document.getElementById("AddOrders").onclick = function(){
    if ((Duration.value === "") && (Duration.disabled === false)){
     alert("choose your Duration!");
     return;
-
   }
-
-   var grand_total = parseFloat(document.getElementById("GrandTotal").innerHTML);
-   var total_ftokens = parseInt(document.getElementById("Ftokens").innerHTML);
-   var grand_token = parseFloat(document.getElementById("pFtokens").innerHTML);
-   var total_fapasses = parseInt(document.getElementById("afpasses").innerHTML);
-   var grand_fpasses = parseFloat(document.getElementById("pafpasses").innerHTML);
-   var total_lapasses = parseInt(document.getElementById("alpasses").innerHTML);
-   var grand_lpasses = parseFloat(document.getElementById("palpasses").innerHTML);
-   var choice = parseInt(document.getElementById("se_activity").value);
+  var grand_total = parseFloat(document.getElementById("GrandTotal").innerHTML);
+  var total_ftokens = parseInt(document.getElementById("Ftokens").innerHTML);
+  var grand_token = parseFloat(document.getElementById("pFtokens").innerHTML);
+  var total_fapasses = parseInt(document.getElementById("afpasses").innerHTML);
+  var grand_fpasses = parseFloat(document.getElementById("pafpasses").innerHTML);
+  var total_lapasses = parseInt(document.getElementById("alpasses").innerHTML);
+  var grand_lpasses = parseFloat(document.getElementById("palpasses").innerHTML);
+  var choice = parseInt(document.getElementById("se_activity").value);
 
   var foreignap =0;
   var localap =0;
-
-
   switch(choice){
     case 2:
       foreignap = parseInt(document.getElementById("Annual_Pasee").value);
@@ -260,13 +253,9 @@ document.getElementById("AddOrders").onclick = function(){
   }
   var ctrl_choice = document.getElementById("se_activity");
   var choice_txt = ctrl_choice.options[ctrl_choice.selectedIndex].text;
-
   var ctrl_duration = document.getElementById("cmbDuration");
   var duration_txt = ctrl_duration.options[ctrl_duration.selectedIndex].text; 
-
-
   var total = tprice;
-  
   var tbody = document.getElementById("mainOrder");
   
  
@@ -337,42 +326,42 @@ document.getElementById("AddOrders").onclick = function(){
 
   calculateLoyaltyPoints();
   resetPurchaseForm();
-  }
+}
 
 function resetPurchaseForm(){
   document.getElementById("book_tickets").reset();
   document.getElementById("currentcost_Order").innerHTML = "0.00";
   }
-    //delete entire table values values and reset to blank when user clicks place order button
-  document.getElementById("placeOrder").onclick = function(){
-    var overallOrder = parseFloat(document.getElementById("overalltotal").innerHTML);
-    if(overallOrder != 0){
-    var Table = document.getElementById("mainOrder");
-    Table.innerHTML="";
-    document.getElementById("GrandTotal").innerHTML = "0.00";
-    document.getElementById("overalltotal").innerHTML = "0.00";
-    document.getElementById("Ftokens").innerHTML = "0";
-    document.getElementById("pFtokens").innerHTML = "0.00";
-    document.getElementById("alpasses").innerHTML = "0";
-    document.getElementById("palpasses").innerHTML = "0.00";
-    document.getElementById("afpasses").innerHTML = "0";
-    document.getElementById("pafpasses").innerHTML = "0.00";
-    ticket.al_price = 0;
-    ticket.af_price = 0;
-   
-    alert("Thank you for your purchase of tickets or additional items. We look forward to seeing you again soon.")
-    }
-    else{
-      alert("You cannot place an order without any items in the overall order. Please add one or more items to continue.")
-    }
+    
+//delete entire table values values and reset to blank when user clicks place order button
+document.getElementById("placeOrder").onclick = function(){
+
+  var overallOrder = parseFloat(document.getElementById("overalltotal").innerHTML);
+  if(overallOrder != 0){
+  var Table = document.getElementById("mainOrder");
+  Table.innerHTML="";
+  document.getElementById("GrandTotal").innerHTML = "0.00";
+  document.getElementById("overalltotal").innerHTML = "0.00";
+  document.getElementById("Ftokens").innerHTML = "0";
+  document.getElementById("pFtokens").innerHTML = "0.00";
+  document.getElementById("alpasses").innerHTML = "0";
+  document.getElementById("palpasses").innerHTML = "0.00";
+  document.getElementById("afpasses").innerHTML = "0";
+  document.getElementById("pafpasses").innerHTML = "0.00";
+  ticket.al_price = 0;
+  ticket.af_price = 0; 
+  alert("Thank you for purchasing tickets . We hope to see you again very soon.")
   }
+  else{
+     alert("You cannot place an order if there are no items in the total order. To proceed, please add one or more items.")
+  }
+}
 
 function calculateLoyaltyPoints() {
   var selectValue = parseInt(document.getElementById("se_activity").value);
   var noOfAdults = parseInt(document.getElementById("no1").value);
   var noOfChildren = parseInt(document.getElementById("no2").value);
   var noAnnualPasses =parseInt(document.getElementById("Annual_Pasee").value);
-
   if(isNaN(noOfAdults)) {
     noOfAdults = 0;
   }
@@ -382,7 +371,6 @@ function calculateLoyaltyPoints() {
   if(isNaN(noAnnualPasses)) {
     noAnnualPasses = 0;
   }
-
   var totalTickets = 0;
   switch(selectValue) {
     case 0:
@@ -393,8 +381,7 @@ function calculateLoyaltyPoints() {
     case 3:
       totalTickets = noAnnualPasses;
     break;
-    }
-
+  }
   var noOfLoyaltyPoints = JSON.parse(localStorage.getItem(`loyality`));
   if(noOfLoyaltyPoints == null) {
     noOfLoyaltyPoints = 0;
@@ -442,10 +429,9 @@ function addLoyaltyToLocalStorage() {
     loyaltyPoints = 20*totalTickets;
     totalLoyaltyPoints = totalLoyaltyPoints +loyaltyPoints;
     localStorage.setItem("loyality",totalLoyaltyPoints);
-    }
+  }
 }
 function showLoyaltyPoints(){
-  
   totalLoyaltyPoints = JSON.parse(localStorage.getItem(`loyality`));
  
   if(totalLoyaltyPoints>0){
@@ -461,33 +447,34 @@ function resetLocalStore() {
   localStorage.setItem("loyality", 0);
 }
 
-  //show hide input  field for number of adults and number of children when the local/foreign annual passes has been selected
-  function displayControl() {
-    let testSelect = document.getElementById("se_activity");
-    let no1 = document.getElementById("no1");
-    let no2 = document.getElementById("no2");
-    let annualPasee = document.getElementById("Annual_Pasee");
-    let selectedValue = testSelect.options[testSelect.selectedIndex].value;
-    switch(selectedValue) {
-        case '0':
-        case '1':
-            no1.classList.remove("hidden");
-            no1.disabled = false;
-            no2.classList.remove("hidden");
-            no2.disabled = false;
-            annualPasee.classList.add("hidden");
-            annualPasee.disabled = true;
-            break;
+//show hide input  field for number of adults and number of children when the local/foreign annual passes has been selected
+function displayControl() {
+  let testSelect = document.getElementById("se_activity");
+  let no1 = document.getElementById("no1");
+  let no2 = document.getElementById("no2");
+  let annualPasee = document.getElementById("Annual_Pasee");
+  let selectedValue = testSelect.options[testSelect.selectedIndex].value;
+  switch(selectedValue) {
 
-        case '2':
-        case '3':
-              annualPasee.classList.remove("hidden");
-              annualPasee.disabled = false;
-              no1.classList.add("hidden");
-              no1.disabled = true;
-              no2.classList.add("hidden");
-              no2.disabled = true;
-              break;
+    case '0':
+    case '1':
+      no1.classList.remove("hidden");
+      no1.disabled = false;
+      no2.classList.remove("hidden");
+      no2.disabled = false;
+      annualPasee.classList.add("hidden");
+      annualPasee.disabled = true;
+      break;
+
+    case '2':
+    case '3':
+      annualPasee.classList.remove("hidden");
+      annualPasee.disabled = false;
+      no1.classList.add("hidden");
+      no1.disabled = true;
+      no2.classList.add("hidden");
+      no2.disabled = true;
+      break;
     }
 }
 
@@ -500,38 +487,36 @@ function Control() {
   let token = document.getElementById("Tokens");
   let selectedValue = testSelect.options[testSelect.selectedIndex].value;
   switch(selectedValue) {
-
-      case '2':
-      case '3':
-            duration.classList.add("hidden");
-            duration.disabled = true;
-            token.classList.add("hidden");
-            token.disabled = true;
-            break;
+    case '2':
+    case '3':
+      duration.classList.add("hidden");
+      duration.disabled = true;
+      token.classList.add("hidden");
+      token.disabled = true;
+      break;
       
-      case '0':
-      case '1':
-            duration.classList.remove("hidden");
-            duration.disabled = false;
-            token.classList.remove("hidden");
-            token.disabled = false;
-            break;      
+    case '0':
+    case '1':
+      duration.classList.remove("hidden");
+      duration.disabled = false;
+      token.classList.remove("hidden");
+      token.disabled = false;
+      break;      
   }
 }
   
 // this function will input the values when the addtofavorite is clicked and get the values when the odderfavorite is clicked 
 
 let formElement = document.getElementById("book_tickets");
- function addToFavorite() {
-    if(formElement.checkValidity()) {
+function addToFavorite() {
 
-
-
-      localStorage.setItem("favorite", JSON.stringify(formData));
-      alert("Your order has been saved as a favorite order")
-    } else {
-      alert("Fill all fields")
-    }
+  if(formElement.checkValidity()) {
+    localStorage.setItem("favorite", JSON.stringify(formData));
+    alert("Your order has been saved as a favorite order");
+  }
+  else {
+    alert("Fill all fields");
+  }
 }
 
 function orderFromFav() {
@@ -547,13 +532,16 @@ function orderFromFav() {
     document.getElementById("Annual_Pasee").value = formData.Annualpass
     document.getElementById("cmbDuration").value = formData.Duration
     document.getElementById("Tokens").value = formData.tokens
+    Control();
+    displayControl();
     calculate();
-    alert("Your order has been retrevied")
+    
+    alert("Your order has been retrevied");
 
     
     
   } else {
-    alert("There is no favorite order")
+    alert("There is no favorite order");
   }
 }
 
